@@ -40,7 +40,7 @@
 @SET "WPCHANGER=..\bin\wallpaperchanger\wallpaperchanger.exe"
 :: Folder where the script is executed
 @SET MYPATH=%~dp0
-@set DEST_IMAGE=%MYPATH%images\FONDO.bmp
+@set DEST_IMAGE=%MYPATH%temp\FONDO.bmp
 :: Colors from http://cloford.com/resources/colours/500col.htm
 :: COLOR violetred 1 -> 255 62 150
 :: COLOR skyblue 1   -> 135	206	255
@@ -48,25 +48,36 @@
 :: Size and color of the image
 @set IMMG_CM=-size 1366x768 xc:"rgb(%BACKGROUND_RGB_COLOR%)"
 
-@rem PLUGIN TITULO
-@set "TITULO_FONT=-font Courier-new-Bold -pointsize 20"
-@set "TITULO_TEXT=Computer: %COMPUTERNAME%"
-@set "TITULO_COLOR=red"
-@set /A TITULO_X=%TODO_X%+2
-@set /A TITULO_Y=%TODO_Y%+2
-@set TITULO=-fill black %TITULO_FONT% -annotate +%TITULO_X%+%TITULO_Y% "%TITULO_TEXT%" 
-@set "TITULO_TEXT=User    : %USERNAME%"
-@set "TITULO_COLOR=red"
-@set /A TITULO_X=%TODO_X%+2
-@set /A TITULO_Y=%TODO_Y%+20
-@set TITULO=%TITULO% -fill black %TITULO_FONT% -annotate +%TITULO_X%+%TITULO_Y% "%TITULO_TEXT%" 
+:: Rounded rectangle
+@set "RECT_COLOR=gray"
+@set /A RECT_X=%TODO_X%-10
+@set /A RECT_Y=%TODO_Y%-10
+@set /A RECT_X2=%RECT_X%+200
+@set /A RECT_Y2=%RECT_Y%+530
+@set RECT=-fill %RECT_COLOR% -draw "roundrectangle %RECT_X%,%RECT_Y%,%RECT_X2%,%RECT_Y2%,2,2"
+
+@rem PLUGIN TEXT
+@set "TEXT_FONT=-font Courier-new-Bold -pointsize 20"
+@set "TEXT_TEXT=Computer: %COMPUTERNAME%"
+@set "TEXT_COLOR=red"
+@set /A TEXT_X=%TODO_X%+2
+@set /A TEXT_Y=%TODO_Y%+2
+@set TEXT=%TEXT% -fill black %TEXT_FONT% -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%" 
+@set "TEXT_TEXT=User    : %USERNAME%"
+@set "TEXT_COLOR=red"
+@set /A TEXT_X=%TODO_X%+2
+@set /A TEXT_Y=%TODO_Y%+20
+@set TEXT=%TEXT% -fill black %TEXT_FONT% -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%" 
 
 :: Generate image
 :: IMMG_CM Commands to pass to convert.exe that makes the big colored image
 :: For debug purposes i put a echo first
-::@echo %CONVERT% %IMMG_CM% %TITULO% %DEST_IMAGE%
-@%CONVERT% %IMMG_CM% %TITULO% %DEST_IMAGE%
+@echo %CONVERT% %IMMG_CM% %RECT% %TEXT% %DEST_IMAGE%
+@%CONVERT% %IMMG_CM% %RECT% %TEXT% %DEST_IMAGE%
 
 :: Set image as wallpaper on windows
 @%WPCHANGER% %DEST_IMAGE% 2
+
+:: ------CLEAN
+@del %MYPATH%\TEMP\*.* /Q
 ::--------------------------------------------------------------------------
