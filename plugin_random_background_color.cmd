@@ -19,12 +19,12 @@
 :: Blue
 @set /a BB=%RANDOM% * 254 / 32768 + 1
 :: the -size parameter is the size of your screen
-@set ORIG_IMAGE=-size 1366x768 xc:"rgb(%RR%,%GG%,%BB%)"
+@set IMMG_CM=-size 1366x768 xc:"rgb(%RR%,%GG%,%BB%)"
 
+:: Generate image
+:: IMMG_CM Commands to pass to convert.exe that makes the big colored image
+@%CONVERT% %IMMG_CM% %DEST_IMAGE%
 
-@%CONVERT% %ORIG_IMAGE% %DEST_IMAGE%
-
-
-:: -----------SET WALLPAPER
+:: Set image as wallpaper on windows
 @%WPCHANGER% %DEST_IMAGE% 2
-::---------------------------------------------------------------------------------------------------------------------------------------
+::--------------------------------------------------------------------------

@@ -1,6 +1,3 @@
-English
--------
-
 # tinbgi
 
 ###English
@@ -24,6 +21,10 @@ Todos ellos estan basados en herramientas que pueden descargarse desde internet
 ### [plugin_random_background_color.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_random_background_color.cmd)
 	(Español) Poner de fondo de escritorio un color aleatorio
 	(English) Change de wallpaper to a random color
+	
+### [plugin_text_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_1.cmd)
+	(Español) Poner un texto en una zona del escritorio con un fondo de color fijo
+	(English) Put some text in a zone of desktop with fixed background color
 
 
 Tools
