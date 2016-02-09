@@ -1,12 +1,3 @@
-::~~Author~~.          Brett Middleton
-::~~Email_Address~~. brettm@arches.uga.edu
-::~~Script_Type~~.   nt command line batch
-::~~Sub_Type~~. Misc
-::~~Keywords~~. environment variables
-
-::~~Comment~~.
-::
-
 ::~~Script~~.
 
 @echo off

@@ -1,13 +1,12 @@
-
 ::~~Script~~.
 
 @echo off
 @cls
 
 ::-----------------------------------------------------------------------------
-::  plugin_text_2.CMD                                                09/02/2016
+::  plugin_random_background_color.cmd                               09/02/2016
 ::-----------------------------------------------------------------------------
-::  Description  :  Sets or clears a group of environment variables containing
+::  Description  :  Change de wallpaper to a random color
 ::               :  
 ::               :  
 ::               :
@@ -18,8 +17,8 @@
 ::  Contact      :  Paco Tudel <paco(dot)tudel(at)gmail(dot)com>
 ::               :  Systems Engineer and IT fighter
 ::-----------------------------------------------------------------------------
-::  USAGE
-::
+::  USAGE        :  Simply download the tools and put in the bin directory
+::               :  of yout computer and execute the script :)
 ::  
 ::-----------------------------------------------------------------------------
 ::  NOTES
