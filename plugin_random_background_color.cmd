@@ -11,9 +11,14 @@
 
 
 @set DEST_IMAGE=%MYPATH%images\FONDO.bmp
+:: The random colors
+:: Red
 @set /a RR=%RANDOM% * 254 / 32768 + 1
+:: Green
 @set /a GG=%RANDOM% * 254 / 32768 + 1
+:: Blue
 @set /a BB=%RANDOM% * 254 / 32768 + 1
+:: the -size parameter is the size of your screen
 @set ORIG_IMAGE=-size 1366x768 xc:"rgb(%RR%,%GG%,%BB%)"
 
 
