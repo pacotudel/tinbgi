@@ -1,4 +1,4 @@
-# tinbgi
+# TINBGI
 
 ###English
 -------
@@ -30,6 +30,9 @@ Todos ellos estan basados en herramientas que pueden descargarse desde internet
 	(Español) Poner un texto (2 lineas de texto) en una zona del escritorio con un fondo de color fijo
 	(English) Put some text (2 lines of text) in a zone of desktop with fixed background color
 
+### [plugin_text_with_nice_square_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_with_nice_square_1.cmd)
+	(Español) Poner un texto (2 lineas de texto) en una zona del escritorio con un fondo de color fijo y de fondo un cuadro gris
+	(English) Put some text (2 lines of text) in a zone of desktop with fixed background color and at the background a gray square
 
 Tools
 -----
