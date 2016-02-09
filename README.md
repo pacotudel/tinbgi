@@ -37,6 +37,12 @@ Todos ellos estan basados en herramientas que pueden descargarse desde internet
 ### [plugin_text_with_nice_square_2.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_with_nice_square_2.cmd)
 	(Español) Poner un texto (3 lineas de texto) en una zona del escritorio con un fondo de color fijo y de fondo un cuadro gris y un bonito titulo encima del cuadro de texto
 	(English) Put some text (3 lines of text) in a zone of desktop with fixed background color and at the background a gray square and a beautiful title on top of square text
+	
+### [plugin_text_with_nice_square_3.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_with_nice_square_3.cmd)
+	(Español) Poner un texto (3 lineas de texto) en una zona del escritorio con un fondo de color fijo y de fondo un cuadro gris
+	 y un bonito titulo encima del cuadro de texto... ahora el cuadro tiene un borde mas oscuro
+	(English) Put some text (3 lines of text) in a zone of desktop with fixed background color and at the background a gray square
+	 and a beautiful title on top of square text... the square border is a little more darker
 
 Tools
 -----

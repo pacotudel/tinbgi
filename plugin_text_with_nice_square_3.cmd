@@ -52,12 +52,15 @@
 @set IMMG_CM=-size %SCREEN_RES% xc:"rgb(%BACKGROUND_RGB_COLOR%)"
 
 :: Rounded rectangle
-@set "RECT_COLOR=gray"
+@set "RECT_COLOR=darkgray"
+@set "RECT_COLOR_BRD=gray"
 @set /A RECT_X=%TODO_X%-5
 @set /A RECT_Y=%TODO_Y%-15
 @set /A RECT_X2=%RECT_X%+350
 @set /A RECT_Y2=%RECT_Y%+55
-@set RECT=-fill %RECT_COLOR% -draw "roundrectangle %RECT_X%,%RECT_Y%,%RECT_X2%,%RECT_Y2%,2,2"
+::@set RECT=-fill %RECT_COLOR% -draw "roundrectangle %RECT_X%,%RECT_Y%,%RECT_X2%,%RECT_Y2%,2,2"
+@set RECT=-fill %RECT_COLOR% -stroke !RECT_COLOR_BRD! -strokewidth 2 -draw "roundrectangle %RECT_X%,%RECT_Y%,%RECT_X2%,%RECT_Y2%,2,2"
+:: " -fill !RECT_COLOR! -stroke !FONDO_COLOR_BORDE! -draw " ' "roundrectangle "  & Round(iPxinicio + dx_box) & "," & Round(iPyinicio + dy_box) & "," & Round(iPxinicio + box_x_long) & "," & Round(iPyinicio + box_y_long) & ",3,3" & chr(34)
 
 @rem PLUGIN TITLE
 @set "TITLE_FONT=-font Courier-new-Bold -pointsize 20"
@@ -72,20 +75,20 @@
 @rem PLUGIN TEXT
 @set "TEXT_FONT=-font Courier-new-Bold -pointsize 14"
 @set "TEXT_TEXT=Computer: %COMPUTERNAME%"
-@set "TEXT_COLOR=red"
+@set "TEXT_COLOR=black"
 @set /A TEXT_X=%TODO_X%+2
 @set /A TEXT_Y=%TODO_Y%+2
-@set TEXT=%TEXT% -fill black %TEXT_FONT% -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%" 
+@set TEXT=%TEXT% -fill %TEXT_COLOR% -stroke %TEXT_COLOR% %TEXT_FONT% -strokewidth 0.2 -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%"
 @set "TEXT_TEXT=User    : %USERNAME%"
 @set "TEXT_COLOR=red"
 @set /A TEXT_X=%TODO_X%+2
 @set /A TEXT_Y=%TEXT_Y%+16
-@set TEXT=%TEXT% -fill black %TEXT_FONT% -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%" 
+@set TEXT=%TEXT% -fill %TEXT_COLOR% -stroke %TEXT_COLOR% %TEXT_FONT% -strokewidth 0.2 -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%"
 @set "TEXT_TEXT=Domain  : %USERDOMAIN%"
-@set "TEXT_COLOR=red"
+@set "TEXT_COLOR=green"
 @set /A TEXT_X=%TODO_X%+2
 @set /A TEXT_Y=%TEXT_Y%+16
-@set TEXT=%TEXT% -fill black %TEXT_FONT% -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%" 
+@set TEXT=%TEXT% -fill %TEXT_COLOR% -stroke %TEXT_COLOR% %TEXT_FONT% -strokewidth 0.2 -annotate +%TEXT_X%+%TEXT_Y% "%TEXT_TEXT%"
 
 :: Generate image
 :: IMMG_CM Commands to pass to convert.exe that makes the big colored image
@@ -97,9 +100,9 @@
 @%WPCHANGER% %DEST_IMAGE% 2
 
 :: ------CLEAN
-@del %MYPATH%\img_temp\*.bmp /Q
-@del %MYPATH%\img_temp\*.jpg /Q
-@del %MYPATH%\img_temp\*.jpeg /Q
-@del %MYPATH%\img_temp\*.gif /Q
-@del %MYPATH%\img_temp\*.txt /Q
+@del %MYPATH%\img_temp\*.bmp /Q 2> NUL
+@del %MYPATH%\img_temp\*.jpg /Q 2> NUL
+@del %MYPATH%\img_temp\*.jpeg /Q 2> NUL
+@del %MYPATH%\img_temp\*.gif /Q 2> NUL
+@del %MYPATH%\img_temp\*.txt /Q 2> NUL
 ::--------------------------------------------------------------------------
