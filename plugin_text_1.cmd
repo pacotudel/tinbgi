@@ -1,6 +1,33 @@
-@setlocal EnableDelayedExpansion
-@echo Off
+::~~Script~~.
+
+@echo off
 @cls
+
+::-----------------------------------------------------------------------------
+::  plugin_text_1.CMD                                                09/02/2016
+::-----------------------------------------------------------------------------
+::  Description  :  Put some text in a zone of desktop with fixed background 
+::               :  color
+::               :  
+::               :
+::  Requires     :  Windows NT with command extensions enabled
+::               :
+::  Tested       :  Yes, as demonstration
+::               :
+::  Contact      :  Paco Tudel <paco(dot)tudel(at)gmail(dot)com>
+::               :  Systems Engineer and IT fighter
+::-----------------------------------------------------------------------------
+::  USAGE        :  Simply download the tools and put in the bin directory
+::               :  of yout computer and execute the script :)
+::  
+::-----------------------------------------------------------------------------
+::  NOTES
+::
+::  
+::-----------------------------------------------------------------------------
+
+
+@setlocal EnableDelayedExpansion
 
 :: Location of text on the screen
 @set TODO_X=997
