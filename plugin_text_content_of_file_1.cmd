@@ -55,7 +55,7 @@
 @set FICH_TXT_TMP=%MYPATH%temp\tmp.txt
 
 :: A nice line
-@set "LINEA=_______________________________________"
+@set "LINEA=__________________________________________"
 
 :: Put a nice logo on right corner
 :: Size of my logo is x=242 y=243
@@ -114,8 +114,8 @@
 @set /A SYSTEM_X1=%RECT_X%+0
 @set /A SYSTEM_Y1=%RECT_Y%+75
 @set /A SYSTEM_Y_FONDO=%TEXTO2_Y%-14
-@set /A SYSTEM_X2=%SYSTEM_X1%+%SYSTEM_SIZE_X%
-@set /A SYSTEM_Y2=%SYSTEM_Y1%+%SYSTEM_SIZE_Y%
+@set /A SYSTEM_X2=%SYSTEM_X1%+350
+@set /A SYSTEM_Y2=%SYSTEM_Y1%+170
 :: TEXT POSITION
 @set /A SYSTEM_TEXT_X=%SYSTEM_X1%+4
 @set /A SYSTEM_TEXT_Y=%SYSTEM_Y1%+3
@@ -144,12 +144,12 @@ goto END_FILE
 :: SUBROUTINES
 
 :Read_System_things
-@echo !LINEA! 										>  !FICH_TXT_TMP!
-@echo Creacion:  !time! - !date!					>> !FICH_TXT_TMP!
-@echo Usuario:   !USERNAME!							>> !FICH_TXT_TMP!
-@echo Dominio:   !USERDOMAIN!						>> !FICH_TXT_TMP!
-@echo Host:      !COMPUTERNAME!						>> !FICH_TXT_TMP!
-@echo Discos:										>> !FICH_TXT_TMP!
+@echo !LINEA! >  !FICH_TXT_TMP!
+@echo Creacion:  !time! - !date! >> !FICH_TXT_TMP!
+@echo Usuario:   !USERNAME! >> !FICH_TXT_TMP!
+@echo Dominio:   !USERDOMAIN! >> !FICH_TXT_TMP!
+@echo Host:      !COMPUTERNAME! >> !FICH_TXT_TMP!
+@echo Discos: >> !FICH_TXT_TMP!
 ::@echo !LINEA!										>> !FICH_TXT_TMP!
 ::@cscript %MYPATH%plugin\fsutil.vbs C: //nologo	>> !FICH_TXT_TMP!
 ::@cscript %MYPATH%plugin\fsutil.vbs D: //nologo	>> !FICH_TXT_TMP!
@@ -161,10 +161,10 @@ goto END_FILE
 :: -1 show only one month
 :: -m month starts on Monday
 ::@%MYPATH%bin\cal\cal.exe %CALENDAR_OPTIONS%		>> !FICH_TXT_TMP!
-@echo !LINEA!										>> !FICH_TXT_TMP!
-@echo TODO:											>> !FICH_TXT_TMP!
-@echo  - Make this									>> !FICH_TXT_TMP!
-@echo  - See you									>> !FICH_TXT_TMP!
+@echo !LINEA! >> !FICH_TXT_TMP!
+@echo TODO: >> !FICH_TXT_TMP!
+@echo  - Make this >> !FICH_TXT_TMP!
+@echo  - See you >> !FICH_TXT_TMP!
 ::@type %TODO_FILE%									>> !FICH_TXT_TMP!
 ::@echo !LINEA!										>> !FICH_TXT_TMP!
 :END_FILE
