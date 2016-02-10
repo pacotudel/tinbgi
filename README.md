@@ -57,6 +57,11 @@ Todos ellos estan basados en herramientas que pueden descargarse desde internet
 ### [plugin_text_content_of_file_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_content_of_file_1.cmd)
 	(Español) Sumar a lo anterior el contenido de un fichero de texto.
 	(English) Add the content of a text file.
+
+### [plugin_text_content_of_file_2.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_content_of_file_2.cmd)
+	(Español) Sumar a lo anterior el contenido de un fichero de texto.
+	(English) Add the content of a text file and add the c: usage and the result of cal.exe utility
+     to get a nice calendar on screen
 	
 
 Tools
@@ -65,6 +70,9 @@ Tools
 1. [Imagemagick](http://www.imagemagick.org/script/binary-releases.php) I'm working with the portable edition and I locate on ..\bin\imagemagick
 
 2. [Wallpaperchanger](http://www.sg20.com/wallpaperchanger/) located on ..\bin\wallpaperchanger
+
+3. [cal for windows](https://code.google.com/archive/p/cal-win32/downloads) located on ..\bin\cal\cal.exe 
+	It's the port for win32 of the cal utility for windows, it makes a calendar on the ms-dos screen
 
 Beautiful Colors Site
 ---------------------
