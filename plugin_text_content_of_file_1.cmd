@@ -119,7 +119,7 @@
 :: TEXT POSITION
 @set /A SYSTEM_TEXT_X=%SYSTEM_X1%+4
 @set /A SYSTEM_TEXT_Y=%SYSTEM_Y1%+3
-
+@set "TEXT_COLOR=black"
 @set TEXT=%TEXT% -fill %RECT_COLOR% -stroke !RECT_COLOR_BRD! -strokewidth 2 -draw "roundrectangle %SYSTEM_X1%,%SYSTEM_Y1%,%SYSTEM_X2%,%SYSTEM_Y2%,2,2"
 @set TEXT=%TEXT% -fill %TEXT_COLOR% -stroke %TEXT_COLOR% %TEXT_FONT% -strokewidth 0.2 -annotate +%SYSTEM_TEXT_X%+%SYSTEM_TEXT_Y% @%FICH_TXT_TMP%
 ::-------------------------------------------------------------------------------------------------------------------
@@ -150,17 +150,6 @@ goto END_FILE
 @echo Dominio:   !USERDOMAIN! >> !FICH_TXT_TMP!
 @echo Host:      !COMPUTERNAME! >> !FICH_TXT_TMP!
 @echo Discos: >> !FICH_TXT_TMP!
-::@echo !LINEA!										>> !FICH_TXT_TMP!
-::@cscript %MYPATH%plugin\fsutil.vbs C: //nologo	>> !FICH_TXT_TMP!
-::@cscript %MYPATH%plugin\fsutil.vbs D: //nologo	>> !FICH_TXT_TMP!
-::@cscript %MYPATH%plugin\fsutil.vbs F: //nologo	>> !FICH_TXT_TMP!
-::@cscript %MYPATH%plugin\fsutil.vbs T: //nologo	>> !FICH_TXT_TMP!
-::@echo !LINEA!										>> !FICH_TXT_TMP!
-::@echo CALENDARIO:									>> !FICH_TXT_TMP!
-:: Calendario
-:: -1 show only one month
-:: -m month starts on Monday
-::@%MYPATH%bin\cal\cal.exe %CALENDAR_OPTIONS%		>> !FICH_TXT_TMP!
 @echo !LINEA! >> !FICH_TXT_TMP!
 @echo TODO: >> !FICH_TXT_TMP!
 @echo  - Make this >> !FICH_TXT_TMP!
