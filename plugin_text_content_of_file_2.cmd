@@ -132,7 +132,7 @@
 :: Generate image
 :: IMMG_CM Commands to pass to convert.exe that makes the big colored image
 :: For debug purposes i put a echo first
-@echo %CONVERT% %IMMG_CM% %TITLE% %RECT% %TEXT% %DEST_IMAGE%
+:: @echo %CONVERT% %IMMG_CM% %TITLE% %RECT% %TEXT% %DEST_IMAGE%
 @%CONVERT% %IMMG_CM% %TITLE% %RECT% %TEXT% %DEST_IMAGE%
 
 :: Set image as wallpaper on windows
