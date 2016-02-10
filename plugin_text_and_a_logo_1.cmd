@@ -32,9 +32,9 @@
 :: Screen Resolution
 @set SCREEN_RES=1920x1080
 
-:: Location of text and rectangle on the image
+:: Reference location of all data (text ... rectangles... logo...) on the image
 @set TODO_X=1550
-@set TODO_Y=70
+@set TODO_Y=170
 
 :: Set programs that does the job
 :: Convert from imagemagick makes the image
@@ -51,6 +51,15 @@
 :: Size and color of the image
 @set IMMG_CM=-size %SCREEN_RES% xc:"rgb(%BACKGROUND_RGB_COLOR%)"
 
+:: Put a nice logo on right corner
+:: Size of my logo is x=242 y=243
+@set LOGO_FILE=images\logo.png
+@set /A LOGO_X0=TODO_X + 100
+@set /A LOGO_Y0=TODO_Y - 165
+@set /A LOGO_X1=121
+@set /A LOGO_Y1=121
+@set TEXT=%TEXT% -draw "image SrcOver %LOGO_X0%,%LOGO_Y0% %LOGO_X1%,%LOGO_Y1% '%LOGO_FILE%'"
+
 :: Rounded rectangle
 @set "RECT_COLOR=darkgray"
 @set "RECT_COLOR_BRD=gray"
@@ -58,9 +67,8 @@
 @set /A RECT_Y=%TODO_Y%-15
 @set /A RECT_X2=%RECT_X%+350
 @set /A RECT_Y2=%RECT_Y%+72
-::@set RECT=-fill %RECT_COLOR% -draw "roundrectangle %RECT_X%,%RECT_Y%,%RECT_X2%,%RECT_Y2%,2,2"
 @set RECT=-fill %RECT_COLOR% -stroke !RECT_COLOR_BRD! -strokewidth 2 -draw "roundrectangle %RECT_X%,%RECT_Y%,%RECT_X2%,%RECT_Y2%,2,2"
-:: " -fill !RECT_COLOR! -stroke !FONDO_COLOR_BORDE! -draw " ' "roundrectangle "  & Round(iPxinicio + dx_box) & "," & Round(iPyinicio + dy_box) & "," & Round(iPxinicio + box_x_long) & "," & Round(iPyinicio + box_y_long) & ",3,3" & chr(34)
+
 
 @rem PLUGIN TITLE
 @set "TITLE_FONT=-font Courier-new-Bold -pointsize 20"

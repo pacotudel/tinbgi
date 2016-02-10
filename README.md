@@ -31,18 +31,29 @@ Todos ellos estan basados en herramientas que pueden descargarse desde internet
 	(English) Put some text (2 lines of text) in a zone of desktop with fixed background color
 
 ### [plugin_text_with_nice_square_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_with_nice_square_1.cmd)
-	(Español) Poner un texto (2 lineas de texto) en una zona del escritorio con un fondo de color fijo y de fondo un cuadro gris
-	(English) Put some text (2 lines of text) in a zone of desktop with fixed background color and at the background a gray square
+	(Español) Poner un texto (2 lineas de texto) en una zona del escritorio con un fondo de color fijo
+	 y de fondo un cuadro gris
+	 (English) Put some text (2 lines of text) in a zone of desktop with fixed background color and at
+	 the background a gray square
 	
 ### [plugin_text_with_nice_square_2.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_with_nice_square_2.cmd)
-	(Español) Poner un texto (3 lineas de texto) en una zona del escritorio con un fondo de color fijo y de fondo un cuadro gris y un bonito titulo encima del cuadro de texto
-	(English) Put some text (3 lines of text) in a zone of desktop with fixed background color and at the background a gray square and a beautiful title on top of square text
+	(Español) Poner un texto (3 lineas de texto) en una zona del escritorio con un fondo de color fijo
+	 y de fondo un cuadro gris y un bonito titulo encima del cuadro de texto
+	(English) Put some text (3 lines of text) in a zone of desktop with fixed background color and at
+ 	 the background a gray square and a beautiful title on top of square text
 	
 ### [plugin_text_with_nice_square_3.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_with_nice_square_3.cmd)
-	(Español) Poner un texto (3 lineas de texto) en una zona del escritorio con un fondo de color fijo y de fondo un cuadro gris
-	 y un bonito titulo encima del cuadro de texto... ahora el cuadro tiene un borde mas oscuro
-	(English) Put some text (3 lines of text) in a zone of desktop with fixed background color and at the background a gray square
-	 and a beautiful title on top of square text... the square border is a little more darker
+	(Español) Poner un texto (3 lineas de texto) en una zona del escritorio con un fondo de color fijo
+ 	 y de fondo un cuadro gris y un bonito titulo encima del cuadro de texto... ahora el cuadro tiene
+	 un borde mas oscuro.
+	(English) Put some text (3 lines of text) in a zone of desktop with fixed background color and at
+	 the background a gray square and a beautiful title on top of square text... the square border is
+	 a little more darker.
+
+### [plugin_text_and_a_logo_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_and_a_logo_1.cmd)
+	(Español) Lo mismo que los anteriores añadiendo un logo arriba a la izquierda.
+	(English) Same but adding a logo image at top left.
+	 
 
 Tools
 -----

@@ -69,4 +69,10 @@
 
 :: Set image as wallpaper on windows
 @%WPCHANGER% %DEST_IMAGE% 2
+:: ------CLEAN
+@del %MYPATH%\img_temp\*.bmp /Q 2> NUL
+@del %MYPATH%\img_temp\*.jpg /Q 2> NUL
+@del %MYPATH%\img_temp\*.jpeg /Q 2> NUL
+@del %MYPATH%\img_temp\*.gif /Q 2> NUL
+@del %MYPATH%\img_temp\*.txt /Q 2> NUL
 ::--------------------------------------------------------------------------
