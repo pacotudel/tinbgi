@@ -30,10 +30,10 @@
 @setlocal EnableDelayedExpansion
 
 :: Screen Resolution
-@set SCREEN_RES=1920x1080
+@set SCREEN_RES=1366x768
 
 :: Reference location of all data (text ... rectangles... logo...) on the image
-@set TODO_X=1550
+@set TODO_X=1000
 @set TODO_Y=170
 
 :: Set programs that does the job
