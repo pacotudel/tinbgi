@@ -53,7 +53,11 @@ Todos ellos estan basados en herramientas que pueden descargarse desde internet
 ### [plugin_text_and_a_logo_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_and_a_logo_1.cmd)
 	(Español) Lo mismo que los anteriores añadiendo un logo arriba a la izquierda.
 	(English) Same but adding a logo image at top left.
-	 
+
+### [plugin_text_content_of_file_1.cmd](https://github.com/pacotudel/tinbgi/blob/master/plugin_text_content_of_file_1.cmd)
+	(Español) Sumar a lo anterior el contenido de un fichero de texto.
+	(English) Add the content of a text file.
+	
 
 Tools
 -----
