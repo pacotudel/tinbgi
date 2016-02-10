@@ -4,11 +4,11 @@
 @cls
 
 ::-----------------------------------------------------------------------------
-::  plugin_text_with_nice_square_2.cmd                               09/02/2016
+::  plugin_text_and_a_logo_1.cmd.cmd                                 10/02/2016
 ::-----------------------------------------------------------------------------
-::  Description  :  Put some text (3 lines of text) in a zone of desktop 
-::               :  with fixed background color and at the background 
-::               :  a gray square and a beautiful title on top of square text
+::  Description  :  Same but adding a logo image at top left. 
+::               :  
+::               :  
 ::               :
 ::  Requires     :  Windows NT with command extensions enabled
 ::               :
